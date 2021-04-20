@@ -1,37 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
+import DataMap from './DataMap';
+import GetDogs from './GetDogs';
 
 const Registry = () => {
-    const [name, setName] = useState(null);
+   
     useEffect(() => {
-        async function getDogs() {
-        
-            let url = `https://api.jsonbin.io/b/607eb78124143e5df089bc47`
-        
-            try {
-                let resp = await fetch(url);
-                let data = await resp.json();
-                setName(data[0].name)
-                console.log(data)
-        
-                return data;
-            }
-            catch (error) {
-                console.log(error);
-            }
-        }
-        return () => {
-            getDogs();
-            
-        }
+            GetDogs();            
     }, []);
 
     
     return (
-        <div>
-            <p>Dog Info</p>
-            <p>{name}</p>
-        </div>
-
+            <div>
+                <p>Dog Info</p>
+                <DataMap />
+            </div>
     )
 }
 

@@ -1,0 +1,21 @@
+.dogEntry {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    max-height: auto;
+}
+
+.dogPortrait {
+    max-width: 450px;
+}
+
+.presentImg {
+    width: 20px;
+    height: 20px;
+}
+
+.sectionRow {
+    display: flex;
+    flex-direction: row;
+}
