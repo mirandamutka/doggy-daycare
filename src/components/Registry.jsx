@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
-import DataMap from './DataMap';
+import DogList from './DogList';
 import GetDogs from './GetDogs';
+import './Registry.css';
 
 const Registry = () => {
    
@@ -10,9 +11,10 @@ const Registry = () => {
 
     
     return (
-            <div>
-                <p>Dog Info</p>
-                <DataMap />
+            <div className="container">
+                <main>
+                    <DogList />
+                </main>
             </div>
     )
 }

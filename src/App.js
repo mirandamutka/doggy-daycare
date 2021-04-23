@@ -1,17 +1,30 @@
 import './App.css';
 import Welcome from './components/Welcome';
 import DogInfo from './components/DogInfo';
-import Registry from './components/Registry';
+import DogList from './components/DogList';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
+
+  let dogsData = JSON.parse(localStorage.getItem('dogs'));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Welcome />
-        <button onClick={() => localStorage.removeItem('dogs')}>Clear</button>
-        <Registry />
-        
-      </header>
+    <div className="container">
+        <main>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Welcome />
+            </Route>
+            <Route path="/doglist">
+              <DogList dogsData={dogsData} />
+            </Route>
+            <Route path="/dog/:currentDog">
+              <DogInfo />
+            </Route>
+          </Switch>
+        </Router>
+        </main>
     </div>
   );
 }

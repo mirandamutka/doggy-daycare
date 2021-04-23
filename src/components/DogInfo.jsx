@@ -1,29 +1,21 @@
-import Registry from './Registry'; 
-import React, {useState, useEffect} from 'react';
+import { useLocation } from "react-router-dom";
 
 const DogInfo = () => {
-    const [name, setName] = useState(null);
-    const [sex, setSex] = useState(null);
-    const [breed, setBreed] = useState(null);
-    const [age, setAge] = useState(null);
-    const [owner, setOwner] = useState(null);
-    useEffect(() => {
-        let dogsData = JSON.parse(localStorage.getItem('dogs'));
-        setName(dogsData[2].name)
-        setSex(dogsData[2].sex)
-        setBreed(dogsData[2].breed)
-        setAge(dogsData[2].age)
-        setOwner(dogsData[2].owner.name + " " + dogsData[2].owner.lastName)
 
-    }, []);
+    const location = useLocation();
+    const dogSelected = location.state.params;
+    console.log(dogSelected);
     
     return (
         <div>
-            <p>{name}</p>
-            <p>{sex}</p>
-            <p>{breed}</p>
-            <p>{age}</p>
-            <p>{owner}</p>
+            <img src={dogSelected.img} alt={dogSelected.name} />
+            <p>{dogSelected.name}</p>
+            <p>{dogSelected.sex}</p>
+            <p>{dogSelected.age}</p>
+            <p>{dogSelected.breed}</p>
+            <p>{dogSelected.chipNumber}</p>
+            <p>{dogSelected.owner.name} {dogSelected.owner.lastName}</p>
+            <p>{dogSelected.owner.phoneNumber}</p>
         </div>
     )
 }

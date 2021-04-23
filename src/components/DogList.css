@@ -1,0 +1,37 @@
+.dogEntry {
+    padding: 5%;
+    max-width: 400px;
+    max-height: auto;
+    color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-decoration: none;
+}
+
+.dogEntry:hover {
+    background-color: lightgray;
+}
+
+.dogPortrait {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border: 10px solid darkgray;
+    opacity: 50%;
+}
+
+.dogPortraitPresent {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border: 10px solid green;
+}
+
+.sectionText {
+    font-size: 30px;
+    text-align: center;
+}
