@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mirandamutka.github.io/doggy-daycare/static/css/main.7ff88836.chunk.css",
+    "main.js": "/mirandamutka.github.io/doggy-daycare/static/js/main.d0921f1a.chunk.js",
+    "main.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/main.d0921f1a.chunk.js.map",
+    "runtime-main.js": "/mirandamutka.github.io/doggy-daycare/static/js/runtime-main.9d5c59f9.js",
+    "runtime-main.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/runtime-main.9d5c59f9.js.map",
+    "static/js/2.2bccdc2f.chunk.js": "/mirandamutka.github.io/doggy-daycare/static/js/2.2bccdc2f.chunk.js",
+    "static/js/2.2bccdc2f.chunk.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/2.2bccdc2f.chunk.js.map",
+    "static/js/3.abc32b05.chunk.js": "/mirandamutka.github.io/doggy-daycare/static/js/3.abc32b05.chunk.js",
+    "static/js/3.abc32b05.chunk.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/3.abc32b05.chunk.js.map",
+    "index.html": "/mirandamutka.github.io/doggy-daycare/index.html",
+    "static/css/main.7ff88836.chunk.css.map": "/mirandamutka.github.io/doggy-daycare/static/css/main.7ff88836.chunk.css.map",
+    "static/js/2.2bccdc2f.chunk.js.LICENSE.txt": "/mirandamutka.github.io/doggy-daycare/static/js/2.2bccdc2f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d5c59f9.js",
+    "static/js/2.2bccdc2f.chunk.js",
+    "static/css/main.7ff88836.chunk.css",
+    "static/js/main.d0921f1a.chunk.js"
+  ]
+}
