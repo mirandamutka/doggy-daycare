@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mirandamutka.github.io/doggy-daycare/static/css/main.7ff88836.chunk.css",
-    "main.js": "/mirandamutka.github.io/doggy-daycare/static/js/main.89bba42f.chunk.js",
-    "main.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/main.89bba42f.chunk.js.map",
-    "runtime-main.js": "/mirandamutka.github.io/doggy-daycare/static/js/runtime-main.9d5c59f9.js",
-    "runtime-main.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/runtime-main.9d5c59f9.js.map",
-    "static/js/2.816560ae.chunk.js": "/mirandamutka.github.io/doggy-daycare/static/js/2.816560ae.chunk.js",
-    "static/js/2.816560ae.chunk.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/2.816560ae.chunk.js.map",
-    "static/js/3.abc32b05.chunk.js": "/mirandamutka.github.io/doggy-daycare/static/js/3.abc32b05.chunk.js",
-    "static/js/3.abc32b05.chunk.js.map": "/mirandamutka.github.io/doggy-daycare/static/js/3.abc32b05.chunk.js.map",
-    "index.html": "/mirandamutka.github.io/doggy-daycare/index.html",
-    "static/css/main.7ff88836.chunk.css.map": "/mirandamutka.github.io/doggy-daycare/static/css/main.7ff88836.chunk.css.map",
-    "static/js/2.816560ae.chunk.js.LICENSE.txt": "/mirandamutka.github.io/doggy-daycare/static/js/2.816560ae.chunk.js.LICENSE.txt"
+    "main.css": "/doggy-daycare/static/css/main.7ff88836.chunk.css",
+    "main.js": "/doggy-daycare/static/js/main.89bba42f.chunk.js",
+    "main.js.map": "/doggy-daycare/static/js/main.89bba42f.chunk.js.map",
+    "runtime-main.js": "/doggy-daycare/static/js/runtime-main.25bb16f1.js",
+    "runtime-main.js.map": "/doggy-daycare/static/js/runtime-main.25bb16f1.js.map",
+    "static/js/2.816560ae.chunk.js": "/doggy-daycare/static/js/2.816560ae.chunk.js",
+    "static/js/2.816560ae.chunk.js.map": "/doggy-daycare/static/js/2.816560ae.chunk.js.map",
+    "static/js/3.abc32b05.chunk.js": "/doggy-daycare/static/js/3.abc32b05.chunk.js",
+    "static/js/3.abc32b05.chunk.js.map": "/doggy-daycare/static/js/3.abc32b05.chunk.js.map",
+    "index.html": "/doggy-daycare/index.html",
+    "static/css/main.7ff88836.chunk.css.map": "/doggy-daycare/static/css/main.7ff88836.chunk.css.map",
+    "static/js/2.816560ae.chunk.js.LICENSE.txt": "/doggy-daycare/static/js/2.816560ae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9d5c59f9.js",
+    "static/js/runtime-main.25bb16f1.js",
     "static/js/2.816560ae.chunk.js",
     "static/css/main.7ff88836.chunk.css",
     "static/js/main.89bba42f.chunk.js"
