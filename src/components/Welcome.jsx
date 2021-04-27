@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import './Welcome.css'
 const Welcome = () => {
     return (
-        <div>
+        <div className="container">
             <h2>Welcome!</h2>
-            <Link to="/doglist"><button>Dogs</button></Link>
+            <div>
+                At Doggy Daycare we make sure that your dog gets the best treatment and care.
+            </div>
+            <Link to="/doglist"><button className="doglistButton">List of Dogs</button></Link>
         </div>
     )
 }

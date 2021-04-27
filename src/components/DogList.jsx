@@ -16,20 +16,20 @@ const DogList = ({dogsData}) => {
             params: selectedDog
         })
     }
-
     if (dogsData != null) {
         return (
-            dogsData.map((data, key) => {
-                return (
-                        <div className="dogEntry" key={key} onClick={() => selectedDog(data)}>
-                        <img className={data.present ? "dogPortraitPresent" : "dogPortrait"} src={data.img} alt={data.name} />
-                        <div className="sectionText">
-                            <p>{data.sex === "female" ? '♀' : '♂'} {data.name}</p>
+
+                dogsData.map((data, key) => {
+                    return (
+                            <div className="dogEntry" key={key}>
+                                <img className={data.present ? "dogPortrait dogPortraitPresent" : "dogPortrait"} src={data.img} alt={data.name} onClick={() => selectedDog(data)} />
+                                <div className="sectionText">
+                                    <p>{data.sex === "female" ? '♀' : '♂'} {data.name}</p>
+                                </div>
                         </div>
-                    </div>
-                    
-                )
-            })
+                        
+                    )
+                })
         )
     } else {
         return (

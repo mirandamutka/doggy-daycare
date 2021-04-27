@@ -8,30 +8,38 @@
     flex-direction: column;
     margin: 0;
     text-decoration: none;
-}
-
-.dogEntry:hover {
-    background-color: lightgray;
+    transition: background-color 0.5s ease-in, box-shadow 0.3s ease-in;
 }
 
 .dogPortrait {
     object-fit: cover;
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
+    height: calc(250px + 2vmin);
+    width: calc(250px + 2vmin);
     border: 10px solid darkgray;
     opacity: 50%;
+    transition: box-shadow 0.3s ease-in, transform .3s ease-in;
+}
+
+.dogPortrait:hover {
+    box-shadow: 0px 0px 10px 1px darkgray;
+    transform: scale(1.1);
 }
 
 .dogPortraitPresent {
-    object-fit: cover;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
     border: 10px solid green;
+    opacity: 100%;
 }
 
 .sectionText {
-    font-size: 30px;
+    font-size: calc(10px + 2vmin);
     text-align: center;
 }
+
+::-webkit-scrollbar {
+    width: .4em;
+    background-color: #282c34;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: white; 
+  }
