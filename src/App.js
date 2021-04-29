@@ -2,12 +2,12 @@ import './App.css';
 import Welcome from './components/Welcome';
 import DogInfo from './components/DogInfo';
 import DogList from './components/DogList';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 
   let dogsData = JSON.parse(localStorage.getItem('dogs'));
-
+  console.log('Version: 3')
   return (
     <div>
         <header className="App-header">
@@ -31,7 +31,7 @@ function App() {
                     </div>
                   <DogList dogsData={dogsData} />
                 </Route>
-                <Route path="/dog/:currentDog">
+                <Route path="/currentDog">
                   <DogInfo />
                 </Route>
               </Switch>

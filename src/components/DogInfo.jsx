@@ -1,48 +1,40 @@
-import { useLocation } from "react-router-dom";
 import './DogInfo.css'
 
 const DogInfo = () => {
 
-    const location = useLocation();
-    if (location.state) {
-        const dogSelected = location.state.params;
+    let selectedDogData = JSON.parse(localStorage.getItem('selectedDog'));
     
-        console.log(dogSelected);
-        
-        if (dogSelected != null) {
-        return (
-            <div className="dogContainer">
-                <section className="sectionImg">
-                    <img src={dogSelected.img} alt={dogSelected.name} className="dogImg" />
-                    <section className="chipNumber">
-                        <h4>#{dogSelected.chipNumber}</h4>
-                    </section>
+    console.log("Current dog:" + selectedDogData);
+    
+    
+    if (selectedDogData != null) {
+    return (
+        <div className="dogContainer">
+            <section className="sectionImg">
+                <img src={selectedDogData.img} alt={selectedDogData.name} className="dogImg" />
+                <section className="chipNumber">
+                    <h4>#{selectedDogData.chipNumber}</h4>
                 </section>
-                <section className="sectionInfo">
-                    <section className="dogInfo">
-                        <h3>{dogSelected.sex === "female" ? '♀' : '♂'} {dogSelected.name}</h3>
-                        <div>Age: {dogSelected.age}</div>
-                        <div>Breed: {dogSelected.breed}</div>  
-                    </section>    
-                    <section className="ownerInfo">       
-                        <h4>Owner:</h4>
-                        <div>{dogSelected.owner.name} {dogSelected.owner.lastName}</div>
-                        <div>{dogSelected.owner.phoneNumber}</div>
-                    </section>       
-                    
-                    
-                </section>
-            </div>
-        )
-        } else {
-            return (
-                <p>No data found.</p>
-            )
-        }
-    }
-    else {
+            </section>
+            <section className="sectionInfo">
+                <section className="dogInfo">
+                    <h3>{selectedDogData.sex === "female" ? '♀' : '♂'} {selectedDogData.name}</h3>
+                    <div>Age: {selectedDogData.age}</div>
+                    <div>Breed: {selectedDogData.breed}</div>  
+                </section>    
+                <section className="ownerInfo">       
+                    <h4>Owner:</h4>
+                    <div>{selectedDogData.ownerName} {selectedDogData.ownerLastName}</div>
+                    <div>{selectedDogData.ownerPhoneNumber}</div>  
+                </section>       
+                
+                
+            </section>
+        </div>
+    )
+    } else {
         return (
-            <p>No data found, please navigate to page from doglist.</p>
+            <p>No data found.</p>
         )
     }
 }
