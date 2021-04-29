@@ -1,23 +1,17 @@
 .dogEntry {
     padding: 5%;
-    max-width: 400px;
-    max-height: auto;
-    color: black;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    text-decoration: none;
     transition: background-color 0.5s ease-in, box-shadow 0.3s ease-in;
 }
 
 .dogPortrait {
     object-fit: cover;
+    border: 10px solid darkgray;
     border-radius: 50%;
     height: calc(250px + 2vmin);
     width: calc(250px + 2vmin);
-    border: 10px solid darkgray;
-    opacity: 50%;
     transition: box-shadow 0.3s ease-in, transform .3s ease-in;
 }
 
@@ -28,7 +22,6 @@
 
 .dogPortraitPresent {
     border: 10px solid green;
-    opacity: 100%;
 }
 
 .sectionText {

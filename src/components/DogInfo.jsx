@@ -10,26 +10,27 @@ const DogInfo = () => {
     if (selectedDogData != null) {
     return (
         <div className="dogContainer">
-            <section className="sectionImg">
+            <section>
                 <img src={selectedDogData.img} alt={selectedDogData.name} className="dogImg" />
-                <section className="chipNumber">
-                    <h4>#{selectedDogData.chipNumber}</h4>
-                </section>
             </section>
             <section className="sectionInfo">
-                <section className="dogInfo">
+                <section className="infoHeader">
                     <h3>{selectedDogData.sex === "female" ? '♀' : '♂'} {selectedDogData.name}</h3>
-                    <div>Age: {selectedDogData.age}</div>
-                    <div>Breed: {selectedDogData.breed}</div>  
-                </section>    
-                <section className="ownerInfo">       
-                    <h4>Owner:</h4>
-                    <div>{selectedDogData.ownerName} {selectedDogData.ownerLastName}</div>
-                    <div>{selectedDogData.ownerPhoneNumber}</div>  
-                </section>       
-                
-                
-            </section>
+                    <div>#{selectedDogData.chipNumber}</div>
+                </section>
+                <div className="seperator"></div>
+                <section className="sectionDetails">
+                    <section>  
+                        <div>Age: {selectedDogData.age}</div>
+                        <div>Breed: {selectedDogData.breed}</div>   
+                    </section>
+                    <section>
+                        <div>Owner:</div>
+                        <div>{selectedDogData.ownerName} {selectedDogData.ownerLastName}</div>
+                        <div>{selectedDogData.ownerPhoneNumber}</div>   
+                    </section>
+                </section>
+            </section>  
         </div>
     )
     } else {

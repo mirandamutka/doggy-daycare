@@ -2,60 +2,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-    margin: 0;
-    padding: 0;
-}
-
-section.sectionImg {
-    position: relative;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-    flex: 1 1 auto;
+    flex-direction: column;
     width: 100%;
 }
 
 .dogImg {
-    width: 100%;
+    max-width: 100%;
 }
 
 section.sectionInfo {
     display: flex;
     width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.infoHeader {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-section.dogInfo {
-    background-color: lightblue;
-    padding: 5%;
+.seperator {
+    height: 1px;
     width: 100%;
-}
-section.ownerInfo {
-    background-color: lightcoral;
-    padding: 5%;
-    width: 100%;
+    align-self: center;
+    background-color: lightgray;
+    margin-bottom: 5%;
 }
 
-section.chipNumber {
-    color: black;
+section.sectionDetails {
     display: flex;
-    opacity: 75%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     flex-direction: row;
-    justify-content: center;
-    transition: opacity 0.5s ease-in, background-color 0.7s ease-in, transform 0.5s ease-in, color 0.5s ease-in;
-}
-
-section.chipNumber:hover {
-    color: white;
-    opacity: 100%;
-    background-color: darkgray;
-    transform: translateY(-70px);
+    justify-content: space-between;
 }

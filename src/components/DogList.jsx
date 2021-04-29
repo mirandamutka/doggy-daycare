@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from 'react-router-dom';
-import GetDogs from './GetDogs';
+
 import './DogList.css'
 
 const DogList = ({dogsData}) => {
-
-    useEffect(() => {
-        GetDogs();            
-}, []);
 
     const [dog, setDog] = useState([]);
     const [ready, setReady] = useState(false)
@@ -43,7 +39,7 @@ const DogList = ({dogsData}) => {
                 dogsData.map((data, key) => {
                     return (
                             <div className="dogEntry" key={key}>
-                              <img className={data.present ? "dogPortrait dogPortraitPresent" : "dogPortrait"} src={data.img} alt={data.name} onClick={() => selectDog(data)} />
+                              <img src={data.img} alt={data.name} className={data.present ? "dogPortrait dogPortraitPresent" : "dogPortrait"} onClick={() => selectDog(data)} />
                                 <div className="sectionText">
                                     <p>{data.sex === "female" ? '♀' : '♂'} {data.name}</p>
                                 </div>
