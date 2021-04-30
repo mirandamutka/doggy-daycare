@@ -3,12 +3,17 @@ import { useHistory } from 'react-router-dom';
 
 import './DogList.css'
 
-const DogList = ({dogsData}) => {
+const DogList = (loaded) => {
 
     const [dog, setDog] = useState([]);
     const [ready, setReady] = useState(false)
     const history = useHistory();
-    
+
+    let dogsDataUnparsed = localStorage.getItem('dogs')
+    let dogsData = JSON.parse(dogsDataUnparsed);
+
+    console.log('loaded: ' + loaded);
+    console.log('dogsData: ' + dogsData);
 
     function selectDog(data) {
         setDog({
@@ -24,36 +29,29 @@ const DogList = ({dogsData}) => {
         })
         setReady(true)
     }
-
     
     if (ready) {
         localStorage.setItem('selectedDog', JSON.stringify(dog));
-        history.push('/currentDog')
+        history.push('/currentDog');
     } else {
-        console.log('no data')
+        console.log('No dog selected');
     }
 
-
-    if (dogsData != null) {
-        return (
-                dogsData.map((data, key) => {
-                    return (
-                            <div className="dogEntry" key={key}>
-                              <img src={data.img} alt={data.name} className={data.present ? "dogPortrait dogPortraitPresent" : "dogPortrait"} onClick={() => selectDog(data)} />
-                                <div className="sectionText">
-                                    <p>{data.sex === "female" ? '♀' : '♂'} {data.name}</p>
-                                </div>
+    return (
+        loaded && dogsData ? (
+            dogsData.map((data, key) => {
+                return (
+                    <div className="dogEntry" key={key}>
+                        <img src={data.img} alt={data.name} className={data.present ? "dogPortrait dogPortraitPresent" : "dogPortrait"} onClick={() => selectDog(data)} />
+                        <div className="sectionText">
+                            <p>{data.sex === "female" ? '♀' : '♂'} {data.name}</p>
                         </div>
-                        
-                    )
-                })
+                    </div>
+                )
+            })
+        ) : (
+            <p>Loading...</p>
         )
-    } else {
-        return (
-            <p>No data, please refresh</p>
-        )
-    }
-
-}
+    )}
 
 export default DogList;

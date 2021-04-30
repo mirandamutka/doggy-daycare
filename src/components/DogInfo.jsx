@@ -20,11 +20,11 @@ const DogInfo = () => {
                 </section>
                 <div className="seperator"></div>
                 <section className="sectionDetails">
-                    <section>  
+                    <section className="sectionDog">  
                         <div>Age: {selectedDogData.age}</div>
                         <div>Breed: {selectedDogData.breed}</div>   
                     </section>
-                    <section>
+                    <section className="sectionOwner">
                         <div>Owner:</div>
                         <div>{selectedDogData.ownerName} {selectedDogData.ownerLastName}</div>
                         <div>{selectedDogData.ownerPhoneNumber}</div>   

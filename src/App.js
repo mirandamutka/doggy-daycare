@@ -3,16 +3,16 @@ import Welcome from './components/Welcome';
 import DogInfo from './components/DogInfo';
 import DogList from './components/DogList';
 import GetDogs from './components/GetDogs';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    GetDogs();            
+    GetDogs(() => setLoaded(true));            
 }, []);
-  let dogsData = JSON.parse(localStorage.getItem('dogs'));
-  console.log('Version: 13')
 
   return (
     <div className="container">
@@ -20,24 +20,24 @@ function App() {
         Doggy Daycare
         </header>
         <div>
-            <main>
-            <Router>
-              <Switch>
-                <Route exact path="/">
-                  <Welcome />
-                </Route>
-                <Route path="/doglist">
-                  <div className="stickyWrapper" />
-                  <DogList dogsData={dogsData} />
-                </Route>
-                <Route path="/currentDog">
-                  <DogInfo />
-                </Route>
-              </Switch>
-            </Router>
-            </main>
+          <main>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Welcome />
+              </Route>
+              <Route path="/doglist">
+                <div className="stickyWrapper" />
+                <DogList loaded={loaded} />
+              </Route>
+              <Route path="/currentDog">
+                <DogInfo />
+              </Route>
+            </Switch>
+          </Router>
+          </main>
         </div>
-        </div>
+    </div>
   );
 }
 
