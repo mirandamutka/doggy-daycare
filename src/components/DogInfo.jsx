@@ -2,10 +2,7 @@ import './DogInfo.css'
 
 const DogInfo = () => {
 
-    let selectedDogData = JSON.parse(localStorage.getItem('selectedDog'));
-    
-    console.log("Current dog:" + selectedDogData);
-    
+    let selectedDogData = JSON.parse(localStorage.getItem('selectedDog'));    
     
     if (selectedDogData != null) {
     return (

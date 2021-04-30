@@ -1,3 +1,7 @@
+.welcomeMessage {
+    padding: 5em;
+}
+
 button.doglistButton {
     border: lightblue;
     background-color: #282c34;

@@ -11,10 +11,7 @@ const DogList = (loaded) => {
 
     let dogsDataUnparsed = localStorage.getItem('dogs')
     let dogsData = JSON.parse(dogsDataUnparsed);
-
-    console.log('loaded: ' + loaded);
-    console.log('dogsData: ' + dogsData);
-
+    
     function selectDog(data) {
         setDog({
             img: data.img,

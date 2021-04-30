@@ -5,7 +5,6 @@ const GetDogs = async (setLoaded) => {
     fetch(url)
     .then (async response => {
         const data = await response.json()
-        console.log('getDogs: ' + data);
         localStorage.setItem('dogs', JSON.stringify(data));
         setLoaded();
     })
